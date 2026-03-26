@@ -171,3 +171,15 @@ Thu Mar 26 07:57:13 PM UTC 2026:
  tests:  9|3
 total_score: 30/60
 f63f1fd
+Thu Mar 26 07:59:34 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:91:28: error: dereferencing ‘void *’ pointer [-Werror]
+   91 |     Node *aux = createNode(*data);
+      |                            ^~~~~
+list.c:91:28: error: invalid use of void expression
+cc1: all warnings being treated as errors
+50e7ef6
