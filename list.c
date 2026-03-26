@@ -45,11 +45,11 @@ List * createList() {
 //   - La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.
 
 void * firstList(List * list) {
-    Node **aux = list->head;
-
-    list->current = aux;
+    if(list == NULL) return NULL;
+        
+    list->current = list->head;
     
-    return (aux->data);
+    return (list->head->data);
 }
 
 void * nextList(List * list) {
