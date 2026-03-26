@@ -78,3 +78,23 @@ Thu Mar 26 07:22:35 PM UTC 2026:
  tests:  2|5
 total_score: 15/60
 da5ed27
+Thu Mar 26 07:24:47 PM UTC 2026: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:56:12: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   56 |     if(list->prev == NULL) return NULL;
+      |            ^~
+list.c:58:25: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   58 |     list->current = list->prev;
+      |                         ^~
+list.c:60:17: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   60 |     return (list->prev->data);
+      |                 ^~
+list.c:61:1: error: control reaches end of non-void function [-Werror=return-type]
+   61 | }
+      | ^
+cc1: all warnings being treated as errors
+31745a3
