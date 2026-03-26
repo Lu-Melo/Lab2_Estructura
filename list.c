@@ -32,7 +32,7 @@ Node * createNode(void * data) {
 // Recuerda reservar memoria al puntero usando malloc o calloc.
 
 List * createList() {
-    List *lista = (*lista) malloc(1 * sizeof(List));
+    List *lista = (List*) malloc(1 * sizeof(List));
     lista->head = NULL;
     lista->tail = NULL;
     lista->current = NULL;
