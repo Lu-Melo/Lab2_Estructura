@@ -6,3 +6,16 @@ Thu Mar 26 07:00:02 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 eb19ab4
+Thu Mar 26 07:05:51 PM UTC 2026: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:19: error: incompatible types when initializing type ‘List *’ {aka ‘struct List *’} using type ‘List’ {aka ‘struct List’}
+   35 |     List *lista = (*lista) malloc(1 * sizeof(List));
+      |                   ^
+list.c:35:28: error: expected ‘,’ or ‘;’ before ‘malloc’
+   35 |     List *lista = (*lista) malloc(1 * sizeof(List));
+      |                            ^~~~~~
+193adb8
