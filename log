@@ -214,3 +214,14 @@ Sun Mar 29 04:55:02 PM UTC 2026:
  1 file changed, 3 insertions(+)
  tests:  0|0
 729f1ec
+Sun Mar 29 04:56:43 PM UTC 2026: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:127:9: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  127 |     if (der->prev = NULL) der->prev = aux;
+      |         ^~~
+cc1: all warnings being treated as errors
+0317c12

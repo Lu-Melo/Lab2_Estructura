@@ -113,6 +113,7 @@ void pushCurrent(List * list, void * data) {
     if(list->head == NULL) {
         list->head = aux;
         list->tail = aux;
+        list->current = aux;
         return;
     }
     
@@ -123,7 +124,10 @@ void pushCurrent(List * list, void * data) {
     aux->next = der;
 
     izq->next = aux;
-    der->prev = aux;
+    if (der->prev = NULL) der->prev = aux;
+    else list->tail = aux;
+
+    list->current = aux;
     
 }
 
