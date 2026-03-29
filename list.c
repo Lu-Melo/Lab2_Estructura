@@ -151,15 +151,20 @@ void * popCurrent(List * list) {
 
     Node *izq = list->current->prev;
     Node *der = list->current->next;
-
-    izq->next = der;
+    
+    if(izq == NULL) {
+        der->prev = NULL;
+        list->head = der;
+    } else {
+        izq->next = der;
+    }
+    
     if(der == NULL) {
         izq->next = NULL;
+        list->tail = izq;
     } else {
         der->prev = izq;
     }
-
-    
     
     void *dato = list->current->data;
     
