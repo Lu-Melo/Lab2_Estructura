@@ -121,6 +121,9 @@ void pushCurrent(List * list, void * data) {
 
     aux->prev = izq;
     aux->next = der;
+
+    izq->next = aux;
+    der->prev = aux;
     
 }
 
