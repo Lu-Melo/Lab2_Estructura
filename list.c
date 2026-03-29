@@ -124,8 +124,8 @@ void pushCurrent(List * list, void * data) {
     aux->next = der;
 
     izq->next = aux;
-    if (der->prev = NULL) der->prev = aux;
-    else list->tail = aux;
+    if (der == NULL) list->tail = aux;
+    else der->prev = aux;
 
     list->current = aux;
     
